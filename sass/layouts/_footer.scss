@@ -1,0 +1,17 @@
+
+.foot {
+    @include layout;
+    padding-bottom: 50px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    &__sbt {
+        margin-bottom: 20px;
+    }
+
+    &__content {
+        display: block;
+    }
+
+}
+

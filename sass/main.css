@@ -1,0 +1,173 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #385898;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  background-color: #00a400;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 10px 76px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+.btn:hover {
+  box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.8);
+}
+
+body {
+  color: #ffffff;
+  font-family: "Rubik", sans-serif;
+  background-color: #f2f2ef;
+}
+
+.heading-xl {
+  font-size: 48px;
+  color: #1877f2;
+  line-height: 48px;
+  font-weight: 700;
+}
+.heading-lg {
+  font-size: 30px;
+  line-height: 48px;
+  color: #1c1e21;
+  font-weight: 500;
+}
+.heading-md {
+  font-size: 17px;
+  line-height: 20px;
+  color: #1877f2;
+  font-weight: 400;
+}
+
+.paragraph-md {
+  font-size: 11px;
+  line-height: 1.34;
+  color: #777;
+  font-weight: 400;
+}
+.paragraph-lg {
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #777;
+}
+
+.form__heading {
+  text-align: center;
+  margin: 40px 0 40px 0;
+}
+
+.hero {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #ffffff;
+  width: 432px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom: 1px solid #777;
+  padding: 15px 0;
+}
+
+.input {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #ffffff;
+  width: 432px;
+  padding: 16px;
+}
+.input--email, .input--mobnum, .input--password {
+  width: 388px;
+  height: 35px;
+  margin-bottom: 10px;
+  padding: 0 15px;
+}
+.input__para {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.input__name {
+  margin-bottom: 10px;
+}
+.input__name--feilds {
+  position: relative;
+  display: inline-block;
+}
+.input__name--text {
+  color: #999;
+  position: absolute;
+  pointer-events: none;
+  left: 11px;
+  top: 10px;
+  transition: 0.2s;
+}
+.input__name--first {
+  width: 190px;
+  height: 35px;
+  margin-right: 8px;
+  padding: 0 10px;
+}
+.input__name--surname {
+  width: 190px;
+  height: 35px;
+  padding: 0 10px;
+}
+
+input {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid #ccd0d5;
+  border-radius: 5px;
+}
+input:focus {
+  border: solid #00a400;
+  border-bottom: solid #00a400;
+}
+input:focus ~ .input__name--text, input:valid ~ .input__name--text {
+  top: -10px;
+  left: 15px;
+  font-size: small;
+  color: #00a400;
+  background-color: #ffffff;
+  padding: 0 3px 0 3px;
+}
+input::-moz-placeholder {
+  color: #777;
+  font-size: 15px;
+}
+input:-ms-input-placeholder {
+  color: #777;
+  font-size: 15px;
+}
+input::placeholder {
+  color: #777;
+  font-size: 15px;
+}
+
+.foot {
+  text-align: center;
+  margin: 0 auto;
+  background-color: #ffffff;
+  width: 432px;
+  padding-bottom: 50px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.foot__sbt {
+  margin-bottom: 20px;
+}
+.foot__content {
+  display: block;
+}/*# sourceMappingURL=main.css.map */

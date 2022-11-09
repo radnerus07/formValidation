@@ -1,0 +1,90 @@
+
+.input {
+    @include layout;
+    padding: 16px;
+   
+    &--email {
+        width: 388px;
+        height: 35px;
+        margin-bottom: 10px;
+        padding: 0 15px;
+    }
+    &--password {
+       @extend .input--email;
+    }
+    &--mobnum {
+        @extend .input--email;
+    }
+    
+    &__para {
+        text-align: left;
+        margin-bottom: 10px;
+    }
+}
+
+.input__name {
+   margin-bottom: 10px;
+  
+
+   &--feilds {
+    position: relative;
+    display: inline-block;
+   }
+   &--text{
+    color: #999;
+    position: absolute;
+    pointer-events: none;
+    left: 11px;
+    top: 10px;
+    transition: 0.2s;
+   }
+    &--first {
+        width: 190px;
+        height: 35px;
+        margin-right: 8px;
+        padding: 0 10px;
+    }
+    &--surname {
+        width: 190px;
+        height: 35px;
+        padding: 0 10px;
+    }
+  
+}
+input {
+  outline: none;
+  box-shadow: none;
+  border: 2px solid $border-color;
+  border-radius: 5px;
+
+  &:focus {
+    border:  solid $button-color;
+    border-bottom: solid  $button-color;
+}
+&:focus ~ .input__name--text, &:valid ~ .input__name--text {
+    top: -10px;
+    left: 15px;
+    font-size: small;
+    color: $button-color;
+    background-color:$text-color-general;
+    padding:0 3px 0 3px;
+}
+
+  &::placeholder {
+    color: $text-color-light;
+    font-size: 15px;
+}
+
+
+}
+
+// input:required:invalid,input:focus:invalid {
+//     background-image: url('thumpsdown.png');
+//     background-position: right;
+//     background-repeat: no-repeat;
+// }
+// input:required:valid {
+//     background-image: url('thumpsup.png');
+//     background-position: right;
+//     background-repeat: no-repeat;
+// }

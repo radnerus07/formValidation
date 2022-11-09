@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="sass/main.css">
+    <title>FaceBook Login</title>
+</head>
+<body>
+    <header>
+        <h1 class="heading-xl form__heading">facebook</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <h2 class="heading-lg">Create a new account</h2>
+            <p class="paragraph-lg">It's quick and easy.</p>
+        </section>
+
+        <section>
+        <div class="input">
+            <div class="input__name">
+                <form class="input__name--feilds" id="namefeilds">
+                    <input type="text" class="input__name--first" required id="fname">
+                    <label class="input__name--text">First Name</label>
+                </form>
+                <form class="input__name--feilds" id="snamefeilds">
+                    <input type="text" class="input__name--surname" required id="surname">
+                    <label class="input__name--text" >Surname</label>
+                </form>
+            </div>
+            <form  class="input__name--feilds" id="emailfeilds">
+                <input type="email" class="input--email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required id="email">
+                <label class="input__name--text">Email address</label>
+            </form>
+            <form class="input__name--feilds" id="mobnumfeilds">
+                <input type="number" class="input--mobnum"  required id="mobilenumber">
+                <label class="input__name--text" >Mobile Number</label>
+             </form>
+             <form class="input__name--feilds" id="passwordfeilds">
+                <input type="password" class="input--password"  required id="password">
+                <label class="input__name--text" >password</label>
+             </form>
+            
+            <p class="paragraph-md input__para">People who use our service may have uploaded your contact information to Facebook. <a href="javascript:void(0);">Learn more.</a></p>
+            <p class="paragraph-md input__para">By clicking Sign Up, you agree to our <a href="javascript:void(0);">Terms</a>, <a href="javascript:void(0);">Privacy Policy</a> and <a href="javascript:void(0);">Cookies Policy</a>. You may receive SMS notifications from us and can opt out at any time</p>
+        </div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <button class=" foot__sbt btn" type="submit" value="submit" id="submit" onclick="checkInputs()">Sign in</button>
+        <a href="javascript:void(0)"  class="foot__content heading-md">Already have an account?</a>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

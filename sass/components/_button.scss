@@ -1,0 +1,19 @@
+@import 'variables';
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: $text-color-general;
+    border-radius: 10px ;
+    border: none;
+    background-color: $button-color;
+    font-weight: weight(bold);
+    font-size: 18px;
+    padding: 10px 76px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+
+
+    &:hover {
+        box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.8);
+      }
+}

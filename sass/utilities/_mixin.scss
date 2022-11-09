@@ -1,0 +1,6 @@
+@mixin layout {
+    text-align: center;
+    margin: 0 auto;
+    background-color: $text-color-general;
+    width: 432px;
+}
