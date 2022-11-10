@@ -97,6 +97,9 @@ body {
   text-align: left;
   margin-bottom: 10px;
 }
+.input__sbt {
+  margin-bottom: 20px;
+}
 
 .input__name {
   margin-bottom: 10px;
@@ -164,9 +167,6 @@ input::placeholder {
   padding-bottom: 50px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-}
-.foot__sbt {
-  margin-bottom: 20px;
 }
 .foot__content {
   display: block;

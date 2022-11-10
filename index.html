@@ -22,38 +22,45 @@
         </section>
 
         <section>
-        <div class="input">
+        <form class="input" id="form">
             <div class="input__name">
-                <form class="input__name--feilds" id="namefeilds">
+                <div class="input__name--feilds" id="namefeilds">
                     <input type="text" class="input__name--first" required id="fname">
                     <label class="input__name--text">First Name</label>
-                </form>
-                <form class="input__name--feilds" id="snamefeilds">
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+
+                </div>
+                <div class="input__name--feilds" id="snamefeilds">
                     <input type="text" class="input__name--surname" required id="surname">
                     <label class="input__name--text" >Surname</label>
-                </form>
+                    <i class="fas fa-check-circle"></i>
+			        <i class="fas fa-exclamation-circle"></i>
+
+                </div>
             </div>
-            <form  class="input__name--feilds" id="emailfeilds">
+            <div  class="input__name--feilds " id="emailfeilds">
                 <input type="email" class="input--email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required id="email">
                 <label class="input__name--text">Email address</label>
-            </form>
-            <form class="input__name--feilds" id="mobnumfeilds">
+            </div>
+            <div class="input__name--feilds  " id="mobilefeilds">
                 <input type="number" class="input--mobnum"  required id="mobilenumber">
-                <label class="input__name--text" >Mobile Number</label>
-             </form>
-             <form class="input__name--feilds" id="passwordfeilds">
+                <label class="input__name--text " >Mobile Number</label>
+             </div>
+             <div class="input__name--feilds " id="passwordfeilds">
                 <input type="password" class="input--password"  required id="password">
                 <label class="input__name--text" >password</label>
-             </form>
+             </div>
             
             <p class="paragraph-md input__para">People who use our service may have uploaded your contact information to Facebook. <a href="javascript:void(0);">Learn more.</a></p>
             <p class="paragraph-md input__para">By clicking Sign Up, you agree to our <a href="javascript:void(0);">Terms</a>, <a href="javascript:void(0);">Privacy Policy</a> and <a href="javascript:void(0);">Cookies Policy</a>. You may receive SMS notifications from us and can opt out at any time</p>
-        </div>
+            <button class=" input__sbt btn" type="submit" value="submit" id="submit" onclick="checkInputs()" >Sign in</button>
+        </form>
         </section>
     </main>
 
     <footer class="foot">
-        <button class=" foot__sbt btn" type="submit" value="submit" id="submit" onclick="checkInputs()">Sign in</button>
+       
         <a href="javascript:void(0)"  class="foot__content heading-md">Already have an account?</a>
     </footer>
     

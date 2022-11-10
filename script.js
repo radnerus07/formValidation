@@ -28,7 +28,7 @@ if(fNameValue === '') {
     alert('Name cannot be blank');
      return false;
 } else if (!isName(fNameValue)){
-    alert('enter only alphabet');
+    alert('fistname should only have alphabet');
     return false;
 }
 
