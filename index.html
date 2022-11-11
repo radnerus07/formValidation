@@ -16,39 +16,32 @@
         <h1 class="heading-xl form__heading">facebook</h1>
     </header>
     <main>
-        <section class="hero">
-            <h2 class="heading-lg">Create a new account</h2>
-            <p class="paragraph-lg">It's quick and easy.</p>
-        </section>
-
         <section>
         <form class="input" id="form">
+            <h2 class="heading-lg">Create a new account</h2>
+            <p class="paragraph-lg ">It's quick and easy.</p>
             <div class="input__name">
-                <div class="input__name--feilds" id="namefeilds">
-                    <input type="text" class="input__name--first" required id="fname">
+                <div class="input__name--feilds" id="namefeilds" data-tooltip="First name should (not be empty / only have alphabet)">
+                    <input type="text" class="input__name--first" required id="fname" placeholder="First Name">
                     <label class="input__name--text">First Name</label>
-                    <i class="fas fa-check-circle"></i>
-			        <i class="fas fa-exclamation-circle"></i>
 
                 </div>
-                <div class="input__name--feilds" id="snamefeilds">
-                    <input type="text" class="input__name--surname" required id="surname">
+                <div class="input__name--feilds"  id="snamefeilds" data-tooltip="surname should only have alphabet">
+                    <input type="text" class="input__name--surname" required id="surname" placeholder="surName">
                     <label class="input__name--text" >Surname</label>
-                    <i class="fas fa-check-circle"></i>
-			        <i class="fas fa-exclamation-circle"></i>
 
                 </div>
             </div>
-            <div  class="input__name--feilds " id="emailfeilds">
-                <input type="email" class="input--email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required id="email">
+            <div  class="input__name--feilds " id="emailfeilds" data-tooltip="Email cannot be blank / Not a valid email" >
+                <input type="email" class="input--email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required id="email" placeholder="Email address">
                 <label class="input__name--text">Email address</label>
             </div>
-            <div class="input__name--feilds  " id="mobilefeilds">
-                <input type="number" class="input--mobnum"  required id="mobilenumber">
+            <div class="input__name--feilds " id="mobilefeilds" data-tooltip="mobileNo cannot be blank / Not a valid mobileNo">
+                <input type="tel"  class="input--mobnum" pattern="[6789][0-9]{9}" title="Please enter valid phone number"  required id="mobilenumber" placeholder="Mobile Number">
                 <label class="input__name--text " >Mobile Number</label>
              </div>
-             <div class="input__name--feilds " id="passwordfeilds">
-                <input type="password" class="input--password"  required id="password">
+             <div class="input__name--feilds " id="passwordfeilds" data-tooltip="Password must be longer than 6 characters">
+                <input type="password" class="input--password"  required id="password" placeholder="password">
                 <label class="input__name--text" >password</label>
              </div>
             

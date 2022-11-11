@@ -1,7 +1,7 @@
 .input {
     @include layout;
     padding: 16px;
-
+    
     &--email {
         width: 388px;
         height: 35px;
@@ -25,11 +25,15 @@
     &__sbt {
         margin-bottom: 20px;
     }
+    
+   
 }
+
 
 .input__name {
     margin-bottom: 10px;
-
+    border-top: 1px solid $text-color-light;
+    padding-top: 15px;
 
     &--feilds {
         position: relative;
@@ -44,6 +48,7 @@
         left: 11px;
         top: 10px;
         transition: 0.2s;
+        visibility: hidden;
     }
 
     &--first {
@@ -71,7 +76,7 @@ input {
         border: solid $button-color;
         border-bottom: solid $button-color;
     }
-
+  
     &:focus~.input__name--text,
     &:valid~.input__name--text {
         top: -10px;
@@ -80,10 +85,121 @@ input {
         color: $button-color;
         background-color: $text-color-general;
         padding: 0 3px 0 3px;
+        visibility: visible;
+
     }
+   
 
     &::placeholder {
         color: $text-color-light;
         font-size: 15px;
+       
     }
+}
+
+
+
+
+
+.fnerror::before,
+.fnerror::after{
+    position: absolute;
+    left: -220px;
+}
+
+.fnerror::before{
+   @include tooltip;
+}
+
+.fnerror::after{
+    content: '';
+    border: 10px solid transparent;
+    border-left-color: $danger ;
+    font-size: 5px;
+    left: 0;
+    top: 70%;
+    transform: translate(-50%,-50%);
+}
+
+.snerror::before,
+.snerror::after{
+    position: absolute;
+    right: -220px;
+}
+.snerror::before{
+   @include tooltip;
+}
+
+.snerror::after{
+    content: '';
+    border: 10px solid transparent;
+    border-right-color: $danger ;
+    font-size: 5px;
+    right: -20px;
+    top: 70%;
+    transform: translate(-50%,-50%);
+}
+
+
+.emailerror::before,
+.emailerror::after{
+    position: absolute;
+    top: 31px;
+    right: -202px;
+    z-index: 1;
+}
+.emailerror::before{
+   @include tooltip;
+}
+
+.emailerror::after{
+    content: '';
+    border: 10px solid transparent;
+    border-left-color: $danger ;
+    font-size: 5px;
+    right: -20px;
+    top: 70%;
+    transform: translate(-50%,-50%);
+}
+
+
+.pherror::before,
+.pherror::after{
+    position: absolute;
+    left: -220px;
+   
+}
+
+.pherror::before{
+   @include tooltip;
+}
+
+.pherror::after{
+    content: '';
+    border: 10px solid transparent;
+    border-left-color: $danger ;
+    font-size: 5px;
+    left: 0;
+    top: 44%;
+    transform: translate(-50%,-50%);
+}
+
+
+.passerror::before,
+.passerror::after{
+    position: absolute;
+    right: -220px;
+}
+.passerror::before{
+   @include tooltip;
+}
+
+.passerror::after{
+    content: '';
+    border: 10px solid transparent;
+    border-right-color: $danger ;
+    font-size: 5px;
+    right: -20px;
+    top: 51%;
+    transform: translate(-50%,-50%);
 }

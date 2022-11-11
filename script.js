@@ -1,7 +1,8 @@
-// const formName = document.getElementById('namefeilds')
-// const formSname = document.getElementById('snamefeilds')
-// const formEmail = document.getElementById('emailfeilds')
-// const formPassword = document.getElementById('passwordfeilds')
+const formName = document.getElementById('namefeilds')
+const formSname = document.getElementById('snamefeilds')
+const formEmail = document.getElementById('emailfeilds')
+const formMobile = document.getElementById('mobilefeilds')
+const formPassword = document.getElementById('passwordfeilds')
 const fName = document.getElementById('fname')
 const surName = document.getElementById('surname')
 const mobileNumber = document.getElementById('mobilenumber')
@@ -16,63 +17,92 @@ const submitBtn = document.getElementById('submit')
 // 	checkInputs();
 // });
 
+// if($('#fname').val()== ''){
+//   $('#fname').css('border-color', 'red');
+// } else {
+//   $('#fname').css('border-color', 'green');
+// }
+
+
+
+let popUp = document.getElementsByClassName('.fnerror');
+  let style = window.getComputedStyle(popUp,'::before');
+  console.log(style.visibility);
+
+  let error = style.getPropertyValue('visibility') == 'visible'
+
 function checkInputs() {
   const fNameValue = fName.value.trim();
   const surNameValue = surName.value.trim();
   const mobileNumberValue = mobileNumber.value.trim();
   const passwordValue = password.value.trim();
   const emailValue = email.value.trim();
-  var letters = /^[A-Za-z]+$/;
 
-if(fNameValue === '') {
-    alert('Name cannot be blank');
+  
+if(fNameValue === '' || (!isName(fNameValue))) {
+  fName.style.borderColor = 'red';
+  formName.classList.add('fnerror')
      return false;
-} else if (!isName(fNameValue)){
-    alert('fistname should only have alphabet');
-    return false;
+} else {
+  fName.style.borderColor = 'green';
+  formName.classList.remove('fnerror')
 }
 
-if(surNameValue === '') {
-    alert('surname cannot be blank');
+if(surNameValue === '' || (!isSurName(surNameValue))) {
+ surName.style.borderColor = 'red';
+ formSname.classList.add('snerror')
      return false;
+}else {
+  surName.style.borderColor = 'green';
+  formSname.classList.remove('snerror')
 }
 
-if(emailValue === '') {
-    alert('Email cannot be blank');
+if(emailValue === '' || (!isEmail(email))) {
+  email.style.borderColor = 'red';
+  formEmail.classList.add('emailerror')
      return false;
-} else if (!isEmail(emailValue)) {
-    alert('Not a valid email');
-     return false;
+} else  {
+  email.style.borderColor = 'green';
+    formEmail.classList.remove('emailerror') 
 } 
 
-if(mobileNumberValue === '' || mobileNumberValue.length < 10) {
-    alert('Number should have minimum 10 digits');
+if(mobileNumberValue === '' ) {
+  mobileNumber.style.borderColor = 'red';
+  formMobile.classList.add('pherror')
      return false;
-} 
-if(mobileNumberValue === '' || mobileNumberValue.length > 10) {
-    alert('Number should have maximum 10 digits');
-     return false;
-} 
+} else{
+  mobileNumber.style.borderColor = 'green';
+  formMobile.classList.remove('pherror')
+}
 
 if (passwordValue .length <= 6){
-    alert('Password must be longer than 6 characters');
+  password.style.borderColor = 'red';
+  formMobile.classList.add('passerror')
      return false;
+ }else {
+  password.style.borderColor = 'green';
+  formMobile.classList.remove('passerror')
  }
 
-else {
-    alert('login successful');
-    return true;
-}
+
+
 }
 
 function isEmail(email) {
-	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+	return /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/.test(email);
 }
 
 function isName(fName) {
     return /^[A-Za-z]+$/.test(fName);
 }
+function isSurName(surName) {
+  return /^[A-Za-z]+$/.test(surName);
+}
 
+
+
+
+// alertbox
 
 
 // submitBtn.addEventListener('click', (e) => {

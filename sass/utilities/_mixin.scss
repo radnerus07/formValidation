@@ -4,3 +4,13 @@
     background-color: $text-color-general;
     width: 432px;
 }
+
+@mixin tooltip {
+    content: attr(data-tooltip);
+    color: $text-color;
+    width: 201px;
+    background-color: $danger;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgb(139 3 0 / 75%), 0 1px 10px rgb(0 0 0 / 35%);
+    padding: 5px;
+}
