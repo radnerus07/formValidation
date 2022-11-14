@@ -98,6 +98,12 @@ body {
 .input__sbt {
   margin-bottom: 20px;
 }
+.input__foot {
+  display: block;
+  padding-bottom: 50px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
 
 .input__name {
   margin-bottom: 10px;
@@ -139,7 +145,7 @@ input:focus {
   border: solid #00a400;
   border-bottom: solid #00a400;
 }
-input:focus ~ .input__name--text, input:valid ~ .input__name--text {
+input:focus ~ .input__name--text {
   top: -10px;
   left: 15px;
   font-size: small;
@@ -291,17 +297,4 @@ input::placeholder {
   right: -20px;
   top: 51%;
   transform: translate(-50%, -50%);
-}
-
-.foot {
-  text-align: center;
-  margin: 0 auto;
-  background-color: #ffffff;
-  width: 432px;
-  padding-bottom: 50px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-.foot__content {
-  display: block;
 }/*# sourceMappingURL=main.css.map */

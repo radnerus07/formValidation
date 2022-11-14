@@ -9,21 +9,6 @@ const mobileNumber = document.getElementById('mobilenumber')
 const password = document.getElementById('password')
 const email = document.getElementById('email')
 const submitBtn = document.getElementById('submit')
-// var error_fname = false;
-// var error_sname = false;
-// var error_email = false;
-// var error_password = false;
-// var error_mobile= false;
-// function isEmail(email) {
-// 	return /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/.test(email);
-// }
-
-function isName(fName) {
-    return /^[A-Za-z]+$/.test(fName);
-}
-function isSurName(surName) {
-  return /^[A-Za-z]+$/.test(surName);
-}
 
 
 
@@ -137,12 +122,6 @@ function checkInputs() {
     return false;
  }
 }
-
-
-
-
-
-
 
 
 

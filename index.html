@@ -16,46 +16,40 @@
         <h1 class="heading-xl form__heading">facebook</h1>
     </header>
     <main>
-        <section>
         <form class="input" id="form">
             <h2 class="heading-lg">Create a new account</h2>
             <p class="paragraph-lg ">It's quick and easy.</p>
             <div class="input__name">
                 <div class="input__name--feilds" id="namefeilds" data-tooltip="First name should (not be empty / only have alphabet)">
-                    <input type="text" class="input__name--first" required id="fname" placeholder="First Name">
+                    <input type="text" class="input__name--first"  id="fname" placeholder="First Name">
                     <label class="input__name--text">First Name</label>
 
                 </div>
                 <div class="input__name--feilds"  id="snamefeilds" data-tooltip="surname should only have alphabet">
-                    <input type="text" class="input__name--surname" required id="surname" placeholder="surName">
+                    <input type="text" class="input__name--surname"  id="surname" placeholder="surName">
                     <label class="input__name--text" >Surname</label>
 
                 </div>
             </div>
             <div  class="input__name--feilds " id="emailfeilds" data-tooltip="Email cannot be blank / Not a valid email" >
-                <input type="email" class="input--email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required id="email" placeholder="Email address">
+                <input type="email" class="input--email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  id="email" placeholder="Email address">
                 <label class="input__name--text">Email address</label>
             </div>
             <div class="input__name--feilds " id="mobilefeilds" data-tooltip="mobileNo cannot be blank / Not a valid mobileNo">
-                <input type="tel"  class="input--mobnum" pattern="[6789][0-9]{9}" title="Please enter valid phone number"  required id="mobilenumber" placeholder="Mobile Number">
+                <input type="tel"  class="input--mobnum" pattern="[6789][0-9]{9}" title="Please enter valid phone number"   id="mobilenumber" placeholder="Mobile Number">
                 <label class="input__name--text " >Mobile Number</label>
              </div>
              <div class="input__name--feilds " id="passwordfeilds" data-tooltip="Password must be longer than 6 characters">
-                <input type="password" class="input--password"  required id="password" placeholder="password">
+                <input type="password" class="input--password"   id="password" placeholder="password">
                 <label class="input__name--text" >password</label>
              </div>
             
             <p class="paragraph-md input__para">People who use our service may have uploaded your contact information to Facebook. <a href="javascript:void(0);">Learn more.</a></p>
             <p class="paragraph-md input__para">By clicking Sign Up, you agree to our <a href="javascript:void(0);">Terms</a>, <a href="javascript:void(0);">Privacy Policy</a> and <a href="javascript:void(0);">Cookies Policy</a>. You may receive SMS notifications from us and can opt out at any time</p>
             <button class=" input__sbt btn" type="submit" value="submit" id="submit" onclick="checkInputs()" >Sign in</button>
+            <a href="javascript:void(0)"  class="input__foot heading-md">Already have an account?</a>
         </form>
-        </section>
     </main>
-
-    <footer class="foot">
-       
-        <a href="javascript:void(0)"  class="foot__content heading-md">Already have an account?</a>
-    </footer>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="script.js"></script>
 </body>

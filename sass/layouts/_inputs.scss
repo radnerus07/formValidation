@@ -25,7 +25,13 @@
     &__sbt {
         margin-bottom: 20px;
     }
-    
+    &__foot {
+        display: block;
+        padding-bottom: 50px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+     
+    }
    
 }
 
@@ -77,8 +83,7 @@ input {
         border-bottom: solid $button-color;
     }
   
-    &:focus~.input__name--text,
-    &:valid~.input__name--text {
+    &:focus~.input__name--text {
         top: -10px;
         left: 15px;
         font-size: small;
