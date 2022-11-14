@@ -9,7 +9,11 @@ const mobileNumber = document.getElementById('mobilenumber')
 const password = document.getElementById('password')
 const email = document.getElementById('email')
 const submitBtn = document.getElementById('submit')
-
+// var error_fname = false;
+// var error_sname = false;
+// var error_email = false;
+// var error_password = false;
+// var error_mobile= false;
 // function isEmail(email) {
 // 	return /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/.test(email);
 // }
@@ -26,33 +30,38 @@ function isSurName(surName) {
 //...................validation...........................................
 
 
-function checkFname() {
 
+function checkFname() {
+  var error_fname = false;
   const fNameValue = fName.value.trim();
-  if(fNameValue === '' || (!isName(fNameValue))) {
-    fName.style.borderColor = 'red';
-    formName.classList.add('fnerror')
-       return false;
-  } else {
+  var Fnformat = /^[A-Za-z]+$/;
+  if(fNameValue.match(Fnformat)) {
     fName.style.borderColor = 'green';
     formName.classList.remove('fnerror')
+  } else {
+    fName.style.borderColor = 'red';
+    formName.classList.add('fnerror')
+    error_fname = true;
+      
   }
 }
 
 function checkSname() {
+  var error_sname = false;
   const surNameValue = surName.value.trim();
-  if(surNameValue === '' || (!isSurName(surNameValue))) {
+  var Snformat = /^[A-Za-z]+$/;
+  if(surNameValue.match(Snformat)) {
+    surName.style.borderColor = 'green';
+    formSname.classList.remove('snerror')   
+   }else {
     surName.style.borderColor = 'red';
     formSname.classList.add('snerror')
-        return false;
-   }else {
-
-     surName.style.borderColor = 'green';
-     formSname.classList.remove('snerror')
+    error_sname = true;
    }
 }
 
 function checkEmail() {
+  var error_email = false;
   const emailValue = email.value.trim();
   var Emformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if(emailValue.match(Emformat)) {
@@ -62,12 +71,13 @@ function checkEmail() {
   }else {
     email.style.borderColor = 'red';
       formEmail.classList.add('emailerror') 
-      return false;
+      error_email = true;
+     
   } 
 }
 
 function checkPnumber() {
-
+  var error_password = false;
   var Mpattern =/^\d{10}$/;
   const mobileNumberValue = mobileNumber.value.trim();
   if (mobileNumberValue .match(Mpattern)){
@@ -77,29 +87,55 @@ function checkPnumber() {
    }else {
     mobileNumber.style.borderColor = 'red';
     formMobile.classList.add('pherror')
-    return false;
+    error_mobile= true;
+   
    }
 }
 
 function CheckPassword() {
+  var error_password = false;
   const passwordValue = password.value.trim();
   if (passwordValue .length <= 6 ){
     password.style.borderColor = 'red';
     formPassword.classList.add('passerror')
-       return false;
+    error_password = true;
+      
    }else {
     password.style.borderColor = 'green';
     formPassword.classList.remove('passerror')
+    
    }
 }
 
+form.addEventListener('submit', e => {
+	e.preventDefault();
+	
+	checkInputs();
+});
+
 function checkInputs() {
+  error_fname = false;
+  error_sname = false;
+  error_email = false;
+  error_password = false;
+  error_mobile = false;
+  
   checkFname();
   checkSname();
   checkEmail();
   checkPnumber();
   CheckPassword();
 
+
+
+  if (error_fname === false && error_sname === false && error_email === false && error_password === false && error_mobile=== false) {
+    alert("login Successfull");
+    return true;
+    
+ } else {
+  alert("Please enter the details Correctly");
+    return false;
+ }
 }
 
 
