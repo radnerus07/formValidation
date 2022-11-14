@@ -129,11 +129,11 @@ function checkInputs() {
 
 
   if (error_fname === false && error_sname === false && error_email === false && error_password === false && error_mobile=== false) {
-    alert("login Successfull");
+    swal("Good job!", "login successful!", "success");
     return true;
     
  } else {
-  alert("Please enter the details Correctly");
+  swal("wrong input!", "please fill the form correctly!", "error");
     return false;
  }
 }
